@@ -39,28 +39,32 @@ li a{
 a{
     padding-right: 20px;
 }
-.tabela{
+#tabela{
     background-color: rgba(179, 123, 84, 0.356);
     display: block;
-    width: 1350px;
-    height: 500px;
-
+    width: 100%;
+    height: auto;
     
-    ;
+}
+th{    
+    padding-left: 122px;
+    padding-top: 40px;
 }
 
-    html{
+
+html{
     background-color: rgba(179, 123, 84, 0.356);
-    }
+}
 
 footer{
-    background-color: #d8d8d8;
-    margin: auto;
-    padding: 16px;
-    margin-top: 2px;
-    padding-bottom: 6px;
-    min-height: 18px;
-  }
+        background-color: #111111;
+        color:chocolate;
+        margin: 0;
+        padding: 16px;
+        margin-top: 20%;
+        padding-bottom: 6px;
+        min-height: 18px;
+    }
   span{
       color: slateblue;
   }
@@ -68,4 +72,22 @@ strong{
     margin-left: 20px;
     padding-top: 80px;
 }
-   
+img{
+    margin-left: 140%;
+}   
+.descricao-produto{
+    padding-left: 62px;
+    width: 225px;
+}
+#produto1{
+    margin: 0;
+}
+#produto2{
+    margin: 0em;
+}
+.preco{
+    padding-left: 196px;
+}
+.quantidade{
+    padding-left: 24px;
+}

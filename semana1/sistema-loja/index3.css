@@ -14,10 +14,10 @@ ul{
     padding-bottom: 10px;
 }
 #nome-funcionario{
-    background-color: royalblue;
+    background-color: rgb(225, 161, 65);
     margin: auto;
     padding: 16px;
-    margin-top: 2px;
+    margin-top: 9%;
     padding-bottom: 6px;
     min-height: 18px;
     
@@ -48,36 +48,31 @@ li a{
 a{
     padding-right: 20px;
 }
-.pagina-principal{
+   
+    
+
+#lista-funcionario{
     background-color: rgba(179, 123, 84, 0.356);
     display: block;
-    width: 1350px;
-    height: 500px;
-
+    width: 100%;
+    height: auto;
+   
     
-    ;
-}
-.pagina-principal{
-    background-color: rgba(179, 123, 84, 0.356);
-    display: block;
-    width: 1350px;
-    height: 500px;
-
-    
-    ;
 }
 
 html{
     background-color: rgba(179, 123, 84, 0.356);
 }
 footer{
-    background-color: #d8d8d8;
-    margin: auto;
+    background-color:#111111;
+    color: chocolate;
+    margin: 0;
     padding: 16px;
-    margin-top: 2px;
+    margin-top: 24.4%;
     padding-bottom: 6px;
     min-height: 18px;
-  }
+}
+  
   span{
       color: slateblue;
   }
@@ -85,4 +80,3 @@ strong{
     margin-left: 20px;
     padding-top: 80px;
 }
-   

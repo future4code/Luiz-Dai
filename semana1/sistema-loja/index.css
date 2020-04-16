@@ -54,8 +54,8 @@ a{
 .pagina-principal{
     background-color: rgba(179, 123, 84, 0.356);
     display: block;
-    width: 1350px;
-    height: 500px;
+    width: 100%;
+    height:auto;
 
     
     ;
@@ -63,14 +63,16 @@ a{
 html{
     background-color: rgba(179, 123, 84, 0.356);
 }
+
 footer{
-    background-color: #d8d8d8;
-    margin: auto;
-    padding: 16px;
-    margin-top: 2px;
-    padding-bottom: 6px;
-    min-height: 18px;
-  }
+        background-color: #111111;
+        color: chocolate;
+        margin: 0;
+        padding: 16px;
+        margin-top: 32%;
+        padding-bottom: 6px;
+        min-height: 18px;
+    }
   span{
       color: slateblue;
   }

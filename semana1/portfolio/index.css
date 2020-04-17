@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#desenho-logotipo{
+    width: 50px;
+    height: 50px;
+}
+#logotipo{
+
+    font-size: 9px;
+    background-image: url(business-dog-paws-on-keyboard.jpg);
+    background-size: 1350px 540px;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+h1{
+    margin-left: 0%;
+    margin-bottom: 0%;
+}
+h2{
+    margin-left: 0%;
+    margin-bottom: 0%;
+}
+ul{
+    background-color: rgb(166, 86, 241);
+}
+li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}   
+li a {
+    background-color: darkorchid;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: large;
+    margin-left: 13px;
+    padding: 10px 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-right: 5px;
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    }
+    #foto{
+        width: auto;
+    }
+
+main{
+    background-color: violet;
+}    
+    
+
+   

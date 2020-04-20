@@ -24,11 +24,13 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
+    outline: 0;
      
 }
 
 button:focus {
     color: white;
+    outline: 0;
 }
 
 img {
@@ -52,6 +54,7 @@ div img {
     border-radius: 5px;
     font-size: 20px;
     color: black;
+    outline: 0;
 }
 
 .botao-amarelo:hover {
@@ -132,6 +135,7 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+    outline: 0;
 }
 
 .container-do-search {
@@ -150,9 +154,9 @@ td button {
     color: black;
     margin-left: 44%;
     margin-top: 10%;
+    outline: 0;
 }
 
 #back-button:hover {
     background-color: #635a3d;
   
-}

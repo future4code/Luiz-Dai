@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 h1{
     color: chocolate;
     background-color: black;
@@ -40,22 +39,26 @@ li a {
 a{
     padding-right: 20px;
 }
-#tabela{
-    background-color: rgba(179, 123, 84, 0.356);
-   page-break-inside: auto;
-   background-size: 100% auto;
-    
-    
-}
-th{    
-    padding-left: 122px;
-    padding-top: 40px;
-}
-td{
-    width: auto;
-    height: auto;
+table{
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    border-spacing: 0;
 }
 
+th{
+    background-color: black;
+    color: chocolate;
+}
+
+td{
+    border: 1px solid black;
+    background-color: chocolate;
+}
+tr{
+    border: 1px solid black;
+}
 
 html{
     background-color: rgba(179, 123, 84, 0.356);
@@ -80,30 +83,5 @@ strong{
 }
 
 img{
-    margin-left: 140%;
+    padding-left: 25px;
 }   
-.descricao-produto{
-    
-    width: auto;
-    height: auto;
-}
-#produto1{
-    
-    width: auto;
-    height: auto;
-}
-#produto2{
-    
-    width: auto;
-    height: auto;
-}
-.preco{
-    
-    width: auto;
-    height: auto;
-}
-.quantidade{
-    
-    width: auto;
-    height: auto;
-}

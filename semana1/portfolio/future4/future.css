@@ -6,22 +6,23 @@
 
 header{
     background-color: #cd4d00;
-    height: 60px;
-    padding-bottom: 0px;
-    float: right;
+    width: 100%;;
+    margin-top: 0;
+    position: fixed;
+    
 }
 header a{
     padding: 25px 22px;
     font-size: large;
     text-decoration: none;
     color: white;
-    clear: both;
+    float: right;
     
     
 }
 h1{
-    padding-top: 9%;
-    padding-left: 37%;
+    padding-top: 25px;
+    text-align: center;
     color: white;
 }
 p{
@@ -29,17 +30,17 @@ p{
     text-align: right;
     font-size: 18px;
     padding-right: 10%;
-    padding-top: 10%;
+    padding-bottom: 3%;
 
 }
 
 
 footer{
     background-color:#d8d8d8;
-    height: 30px;
+    height: 10vh;
     text-align: center;
-    padding: 10px;
-   width: 100%;
+    width: 100%;
+   margin-bottom: 0;
 }
 
 #principal{
@@ -55,23 +56,29 @@ footer{
 }
 #conteudo{
     background-color:#5c5c93 ;
-    min-width: 800px;
-    height: 600px;
-   padding: 10%;
+   margin: 0;
+   width: 100%;
+   height: 700px;
+   clear: both;
+  
 }
 
 
 
 
 img{
-    padding-left: 34%;
-    min-width: 250px;
-    height: 200px;
-    padding-top: 4%;
-}
-.container{
-    width: 960px;
-    margin: 0 auto;
+    text-align: right;
+    min-width: 350px;
+    height: 300px;
     
 }
 
+form{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#astronauta{
+    padding-left: 27%;
+    padding-top: 7%;
+}

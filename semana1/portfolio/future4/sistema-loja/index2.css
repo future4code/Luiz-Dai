@@ -38,18 +38,25 @@ li a {
     height: auto;
     width: auto;
 }
+
 a{
     padding-right: 20px;
 }
 .pagina-principal{
-    background-color: rgba(179, 123, 84, 0.356);
+    background-color: rgb(250, 107, 4);
+    width: 100%;
+    margin: auto;
+    border-spacing: 0;
+    text-align: center;
     display: block;
-    width: 10px;
-    height: 0px;
-    margin-left: 15px;
-
-    
-    ;
+}
+form{
+    background-color: chocolate;
+    width: 100%;
+    height: 200px;
+    margin-top: 10%;
+    padding-top: 8%;
+    color: black;
 }
 
 html{
@@ -74,8 +81,12 @@ strong{
 }
 
 button{
-    background-color: tan;
-}   
-form{
-    width: auto;
-}
+    background-color: orangered;
+    border-radius: 10px;
+    border-color: orange;
+    
+}  
+button:active{
+    background-color: red;
+    color: chocolate;
+} 

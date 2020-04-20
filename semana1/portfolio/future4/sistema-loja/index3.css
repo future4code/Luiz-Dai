@@ -15,8 +15,10 @@ ul{
 }
 #nome-funcionario{
     background-color: rgb(225, 161, 65);
+    background-color: rgb(225, 161, 65);
     margin: 3%;
     width: 236px;
+    margin-left: 40%;
 }
 
 li{
@@ -50,9 +52,11 @@ a{
 
 #lista-funcionario{
     background-color: rgba(179, 123, 84, 0.356);
-    display: block;
-    width: 100%;
-    height: auto;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border-spacing: 0;
+    padding-left: 15%;
    
     
 }

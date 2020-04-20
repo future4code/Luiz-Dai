@@ -31,7 +31,7 @@ p{
     color: rgb(247, 152, 9);
     text-shadow: 1px 1px 1px black;
     font-size: 18px;
-    
+    padding-top: 10px;
 }
 footer{
     background-color: rgb(66, 65, 65);
@@ -41,7 +41,7 @@ footer{
 }
 
 #principal{
-    background-image: url(start-up-start-up-revenue.jpg);
+    background-image:url(feedback-for-web-design-mockups\ .jpg);
     background-size: 100%;
     min-height: 400px;
     padding: 70px 0 0 0;
@@ -54,7 +54,7 @@ footer{
     text-align: center;
     text-shadow:1px 1px 1px black;
     margin-bottom: 20px;
-    color: blanchedalmond;
+    color: white;
 }
 #logo{
     float: left;
@@ -82,6 +82,12 @@ img{
     width: 100px;
     height: 100px;
     padding-right: 5px;
+}
+#foto-luiz{
+    width: 250px;
+    height: 250px;
+    padding-right: 5px;
+    padding-left: 5%;
     
 }
 .container{
@@ -99,8 +105,16 @@ img{
     color: blanchedalmond;
     text-shadow:1px 1px 1px black ;
 }
-h2{
-    padding-top: 10px;
+section{
+    text-align: center;
+    text-shadow:1px 1px 1px black;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+form{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    padding-left: 12%;
 }
 .social{
     width: 50px;
@@ -114,12 +128,22 @@ h2{
     text-shadow:1px 1px 1px black;
     text-decoration: none;
     padding: 0.4%;
-} 
-form{
+}
+button{
+    background-color: gray;
     color: white;
     text-shadow: 1px 1px 1px black;
-    padding-left: 12%;
-} 
+    border-radius: 10px;
+    padding: 4px;
+}
+
+button:hover{
+    background-color: cadetblue;
+}
+
+button:active{
+    background-color: darkblue;
+}
 #social-texto a:hover{
     color: crimson;
 } 

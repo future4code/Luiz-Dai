@@ -73,6 +73,13 @@ div img {
 .icone {
     height: 15px;
     width: 50px;
+ 
+}
+.icone:hover {
+ filter: opacity(.2);
+}
+.icone:active {
+    filter: opacity(5);
 }
 
 
@@ -159,4 +166,4 @@ td button {
 
 #back-button:hover {
     background-color: #635a3d;
-  
+} 

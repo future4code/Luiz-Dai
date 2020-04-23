@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: blanchedalmond;
+    
+}
+
+header{
+    background-color: rgb(145, 38, 38);
+    height: 99px;
+    padding: 25px;
+    padding-bottom: 38px;
+    
+
+}
+
+h1{
+    text-align: center;
+    text-shadow:1px 1px 1px black;
+    margin-bottom: 20px;
+    color: blanchedalmond;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-shadow:1px 1px 1px black;
+}
+a:hover{
+    color: crimson;
+}
+p{
+    color: black;
+    font-size: 30px;
+
+}
+
+#luiz{
+    color: rgb(247, 152, 9);
+    text-shadow: 1px 1px 1px black;
+    font-size: 18px;
+    padding-top: 10px;
+}
+footer{
+    background-color: rgb(66, 65, 65);
+    height: 30px;
+    text-align: center;
+    padding: 113px;
+}
+
+#principal{
+    background-image:url(feedback-for-web-design-mockups\ .jpg);
+    background-size: 100%;
+    min-height: 400px;
+    padding: 70px 0 0 0;
+    clear: both;
+   
+    
+
+}
+#texto-principal{
+    text-align: center;
+    text-shadow:1px 1px 1px black;
+    margin-bottom: 20px;
+    color: white;
+}
+#logo{
+    float: left;
+}
+#nome-logo{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+#menu{
+    float: right;
+    margin-top: 30px;
+}
+#menu a{
+    
+    padding: 14px 22px;
+    font-size: medium;
+    text-decoration: none;
+    color: white;
+    text-shadow:1px 1px 1px black;
+}
+#menu a:hover{
+    background-color: rgb(155, 45, 25);
+}
+#menu-galeria a:hover{
+    background-color: rgb(155, 45, 25);
+}
+#menu-galeria{
+    font-size: medium;
+    text-decoration: none;
+    color: white;
+    background-color: bla rgb(145, 38, 38);
+    text-shadow:1px 1px 1px black;
+    clear: both;
+    float: right;
+    
+}
+#menu-galeria a{
+    clear: both;
+    padding: 10px 22px;;
+    font-size: medium;
+    text-decoration: none;
+    color: white;
+    text-shadow:1px 1px 1px black;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    padding-right: 5px;
+}
+#foto-luiz{
+    width: 250px;
+    height: 280px;
+    padding-right: 5px;
+    padding-left: 5%;
+    
+}
+.container{
+    min-width: 260px;
+    margin: 0 auto;
+    
+}
+#efeito{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px 0 25px 0;
+}
+#nome{
+    padding-top: 10px;
+    padding-left: 50px;
+    color: blanchedalmond;
+    text-shadow:1px 1px 1px black ;
+}
+.social{
+    width: 50px;
+    height: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+#social-texto a{
+    color: rgb(247, 152, 9);
+    text-shadow:1px 1px 1px black;
+    text-decoration: none;
+    padding: 0.4%;
+}
+section{
+    text-align: center;
+    text-shadow:1px 1px 1px black;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+form{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    padding-left: 12%;
+}
+#social-texto a:hover{
+    color: crimson;
+} 

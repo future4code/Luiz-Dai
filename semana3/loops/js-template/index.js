@@ -67,9 +67,9 @@ aparece 4 linhas cada um com 0 correspondente a linha
 
 
 const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
-const numero =[0]
-for(let numero of array){
- numero.push(numero/10)  
+const numero =[]
+for(let numeros of array){
+ numero.push(numeros/10)  
    
 }
 console.log(`${numero}`)

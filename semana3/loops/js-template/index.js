@@ -26,25 +26,6 @@ console.log(novaLista)*/
 // (6)[12, 15, 18, 21, 27, 30] com o valor 3
 // [12] com o valor 4
 
-/*Nas perguntas abaixo, considere que você tenha acesso a um array  
-(chamado de 'array original') que seja composto somente de números. 
-Após o enunciado, há um exemplo de qual deve ser a resposta final de cada programa individualmente.*/
-
-//a. Escreva um programa que devolva o maior e o menor números contidos no array original
-
-/*const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
-let maiorNumero = array[0]
-let menorNumero = array[0]
-for (let i = 0; i < array.length; i++) {
-   if (array[i] > maiorNumero) {
-       maiorNumero = array[i]
-   }else if (array[i]<menorNumero) {
-       menorNumero = array[i]
-   }
-}
-console.log("O maior número é " + maiorNumero + " e o menor número é " + menorNumero)*/
-
-//b. Escreva um programa que devolva um novo array contendo todos os valores do array original divididos por 10.
 
 /*const quantidadeTotal = Number(prompt("Digite a quantidade de linhas: "))
 let quantidadeAtual = 0
@@ -63,13 +44,54 @@ aparece 4 linhas cada um com 0 correspondente a linha
  000
  0000*/
 
- 
 
 
-const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+/*Nas perguntas abaixo, considere que você tenha acesso a um array  
+(chamado de 'array original') que seja composto somente de números. 
+Após o enunciado, há um exemplo de qual deve ser a resposta final de cada programa individualmente.*/
+
+//a. Escreva um programa que devolva o maior e o menor números contidos no array original
+
+/*const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+let maiorNumero = array[0]
+let menorNumero = array[0]
+for (let i = 0; i < array.length; i++) {
+   if (array[i] > maiorNumero) {
+       maiorNumero = array[i]
+   }else if (array[i]<menorNumero) {
+       menorNumero = array[i]
+   }
+}
+console.log("O maior número é " + maiorNumero + " e o menor número é " + menorNumero)*/
+
+
+//b. Escreva um programa que devolva um novo array contendo todos os valores do array original divididos por 10.
+
+
+/*const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 const numero =[]
 for(let numeros of array){
  numero.push(numeros/10)  
    
 }
-console.log(`${numero}`)
+console.log(`${numero}`)*/
+
+/*c. Escreva um programa que devolva um novo array contendo,
+ somente, os números pares do array original.*/
+/* const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+ let par =[]
+ for (const pares of array) {
+   if(pares%2===0)
+   par.push(pares)
+ }
+ console.log(par)*/
+ /*d. Escreva um programa que gere um novo array contendo strings,
+  da seguinte forma: "O elemento do índex i é: numero"*/
+   
+ /* const array = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+  let novoArray =[]
+  for (let i = 0; i < array.length; i++) {
+  novoArray.push( "O elemento do índex é " +[i]+" " +"número "+ array[i] );
+  
+}
+console.log(novoArray)*/

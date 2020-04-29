@@ -152,3 +152,12 @@ if (numero1 > numero2 && numero2 > numero3) {
     console.log("Digite um número diferente pelo menos")
 }*/
 
+//Exercicio 5
+/*a. Escreva o diagrama esquemático que melhor represente a árvore condicional do exercício. 
+(Coloque a imagem do esquema no drive e gerem um link de compartilhamento público. 
+    Coloque este link num comentário durante a resolução deste exercício)*/
+
+//https://drive.google.com/open?id=11Yt7on74pRvis58H6TzvSueJFe5M0ADR
+
+/*b. Escreva um programa que realize estas perguntas  e indique a classificação final considerada. 
+As opções são: ser humano; mamífero não humano; ave; réptil; anfíbio; peixe ou é invertebrado */

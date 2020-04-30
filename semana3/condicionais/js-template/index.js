@@ -162,26 +162,12 @@ if (numero1 > numero2 && numero2 > numero3) {
 /*b. Escreva um programa que realize estas perguntas  e indique a classificação final considerada. 
 As opções são: ser humano; mamífero não humano; ave; réptil; anfíbio; peixe ou é invertebrado */
 
-let possuiOsso = prompt("Tem osso?")
-let pelo = prompt("Você tem pelo?")
-let racional = prompt("Você é racional?")
-let pena = prompt("Você tem penas?")
-
-if(possuiOsso === "sim"){
-    console.log(pelo)
-}else if(possuiOsso !== "sim"){
-    console.log("Você é um invertebrado")
-}else if(pelo ==="sim"){
-    console.log(mamifero)
-}else if(pelo !=="sim"){
-    console.log(pena)
-}else if(racional ==="sim"){
-    console.log("Você é um ser humnao")
-}else if(racional !=="sim"){
-    console.log("Você é um mamifero não humano")
-}
 
 
-
+let possuiOssos = prompt("O animal possui ossos?")
+ if (possuiOssos === "s") {
+  } let possuiPelos = prompt("O animal possui pelos?")
+  if (possuiPelos === "s") {
+  } let racional = prompt("É um animal racional?")
 
 

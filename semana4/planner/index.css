@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.semanas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30vh 30vh 30vh 30vh 30vh;
+    justify-items: center;
+    margin-top: 60px;
+}

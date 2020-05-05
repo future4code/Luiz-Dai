@@ -3,10 +3,72 @@
     padding: 0;
 }
 
+body{
+    background-color: goldenrod;
+}
+
+header{
+    border: 5px solid royalblue;
+    background-color: turquoise;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+}
+
+h1{
+    margin-left: 30px;
+    color: yellow;
+    text-shadow:1px 1px 1px black;
+
+}
+
+div{
+    display: grid;
+    justify-content: flex-end;
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+input{
+    width: 10%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 1%;
+}
+label{
+    color: yellow;
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   margin-top: 1%;
+   margin-left: 50%;
+   margin-right: 10px;
+    ;
+}
+
 .semanas{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 30vh 30vh 30vh 30vh 30vh;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 50vh 50vh 50vh ;
     justify-items: center;
-    margin-top: 60px;
+    margin-top: 20px;
+    font-size: x-large;
+    color: yellow;
+    text-shadow:1px 1px 1px black;
+    
+}
+
+#domingo{
+    justify-content: flex-end;
+    
+}
+.semana-tamanho{
+border: 5px dashed firebrick;
+width: 80%;
+margin: 10px;
+text-align: center;
 }

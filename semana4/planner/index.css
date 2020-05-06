@@ -9,7 +9,7 @@ body{
 
 header{
     border: 5px solid royalblue;
-    background-color: turquoise;
+    background-color: rgb(224, 75, 64);
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -37,6 +37,7 @@ input{
     flex-direction: row;
     justify-content: end;
     margin-top: 1%;
+    margin-right: 5px;
 }
 label{
     color: yellow;
@@ -45,7 +46,7 @@ label{
     flex-direction: row;
     justify-content: center;
    margin-top: 1%;
-   margin-left: 50%;
+   margin-left: 40%;
    margin-right: 10px;
     ;
 }
@@ -66,9 +67,26 @@ label{
     justify-content: flex-end;
     
 }
-.semana-tamanho{
+.semanaTamanho{
 border: 5px dashed firebrick;
 width: 80%;
 margin: 10px;
 text-align: center;
+}
+
+button{
+    margin-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    background-color: darkgoldenrod;
+    color: yellow;
+    text-shadow: 1px 1px 1px black;
+    height: 10%;
+    width: 6%;
+    border-radius: 8px;
+}
+
+select{
+    height: 5%;
+    margin-top: 1%;
 }

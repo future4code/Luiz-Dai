@@ -10,18 +10,66 @@
 <header>
     <h1>Minha Semana </h1>
     <label for="Nova Tarefa">Nova Tarefa</label>
-    <input type="text" name = "novaTask" id= "novaTask"></input>
+    <input id="meuInput" type="text" name = "novaTask" id= "novaTask"></input>
+    <select name="diaDaSemana" id="diaDaSemana">
+        <option value="selecione">Selecione</option>
+        <option value="segunda">Segunda-feira</option>
+        <option value="terca">Terça-feira</option>
+        <option value="quarta">Quarta-feira</option>
+        <option value="quinta">Quinta-feira</option>
+        <option value="sexta">Sexta-feira</option>
+        <option value="sabado">Sabado-feira</option>
+        <option value="domingo">Domingo</option> 
+
+    </select>
+
+    <button onclick="criarTarefa()">Adicionar tarefa</button>
 </header>
 <body>
     <section class="semanas">
     
-        <article class="semana-tamanho"><p>Segunda</p></article>
-        <article class="semana-tamanho"><p>Terça</p></article>
-        <article class="semana-tamanho"><p>Quarta</p></article>
-        <article class="semana-tamanho"><P>Quinta</P></article>
-        <article class="semana-tamanho"><P>Sexta</P></article>
-        <article class="semana-tamanho"><P>Sabado</P></article>
-        <article class="semana-tamanho"><p>Domingo</p></article>
+        <article class="semanaTamanho">
+            <p>Segunda</p>
+            <ul class="ul-tarefas">
+
+            </ul>
+        </article>
+        <article class="semanaTamanho">
+            <p>Terça</p>
+            <ul class="ul-tarefas">
+
+            </ul>
+        </article>
+        <article class="semanaTamanho">
+            <p>Quarta</p>
+            <ul class="ul-tarefas"l>
+
+            </ul>
+        </article>
+        <article class="semanaTamanho">
+            <P>Quinta</P>
+            <ul class="ul-tarefas"l>
+
+            </ul>
+        </article>
+        <article class="semanaTamanho">
+            <P>Sexta</P>
+            <ul class="ul-tarefas"l>
+
+            </ul>
+        </article>
+        <article class="semanaTamanho">
+            <P>Sabado</P>
+            <ul class="ul-tarefas">
+
+            </ul>
+        </article>
+        <article class="semanaTamanho">
+            <p>Domingo</p>
+            <ul class="ul-tarefas"l>
+
+            </ul>
+        </article>
 
     </section>
 </body>

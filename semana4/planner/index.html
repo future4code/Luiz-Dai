@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"defer></script>
+    <title>Document</title>
+</head>
+<header>
+    <h1>Minha Semana </h1>
+    <label for="Nova Tarefa">Nova Tarefa</label>
+    <input type="text" name = "novaTask" id= "novaTask"></input>
+    <select name="diaDaSemana" id="diaDaSemana">
+        
+        <option value="segunda">Segunda-feira</option>
+        <option value="terca">Terça-feira</option>
+        <option value="quarta">Quarta-feira</option>
+        <option value="quinta">Quinta-feira</option>
+        <option value="sexta">Sexta-feira</option>
+        <option value="sabado">Sabado-feira</option>
+        <option value="domingo">Domingo</option> 
+
+    </select>
+
+    <button onclick="criarTarefa()">Adicionar tarefa</button>
+</header>
+<body>
+    <section class="semanas">
+    
+        <article>
+            <p>Segunda</p>
+            <ul id="segunda">
+
+            </ul>
+        </article>
+        <article>
+            <p>Terça</p>
+            <ul id="terca">
+
+            </ul>
+        </article>
+        <article>
+            <p>Quarta</p>
+            <ul id="quarta">
+
+            </ul>
+        </article>
+        <article>
+            <P>Quinta</P>
+            <ul id="quinta">
+
+            </ul>
+        </article>
+        <article>
+            <P>Sexta</P>
+            <ul id="sexta">
+
+            </ul>
+        </article>
+        <article>
+            <P>Sabado</P>
+            <ul id="sabado">
+
+            </ul>
+        </article>
+        <article>
+            <p>Domingo</p>
+            <ul id="domingo">
+
+            </ul>
+        </article>
+
+    </section>
+</body>
+</html>

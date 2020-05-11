@@ -41,3 +41,24 @@ let c = (prompt("digite mais um numero"))
  }else {
     console.log("Escaleno")
 }*/
+
+//exercicio 5
+/*let numero=prompt("Digite um valor")
+let numero2=prompt("Digite outro valor")
+let valor =Number(numero)
+let valor2=Number(numero2)
+if (numero>numero2) {
+    console.log(`Numero ${numero} é maior`)
+}else{
+    console.log(`Numero ${numero2} é maior`)
+}
+if (numero%numero2===0) {
+    console.log(`${numero} é divisivel por ${numero2}`)
+} else {
+    console.log(`${numero} não é dividivel por ${numero2}`)
+}
+if (numero%numero2===0 && numero>numero2) {
+    console.log(numero-numero2)
+} else {
+    console.log(numero2-numero)
+}*/

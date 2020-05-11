@@ -62,3 +62,20 @@ if (numero%numero2===0 && numero>numero2) {
 } else {
     console.log(numero2-numero)
 }*/
+/*let numeros =[1,2,3,55,85]
+function numeroMaior() {
+for (let numero of numeros) {
+   if (numeros) {
+       
+   } 
+}
+
+}
+console.log(numeros)*/
+
+/*hello = () => {
+    return alert("Hello Future4");
+  }
+*/
+
+  

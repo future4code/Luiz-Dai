@@ -26,17 +26,18 @@ while(quantidadeDeNumerosPares) {
 
 //exercicio 4
 
-let a = prompt("digite um numero")
+/*let a = prompt("digite um numero")
 let b = prompt("digite outro numero")
 let c = (prompt("digite mais um numero"))
  let n1 = Number(a)
  let n2 =Number(b)
  let n3= Number(c)
-if (n1===n2===n3) {
-     console.log("Equilatero")
- }else if (n1!=n2===n3){
-     console.log("Isosxeles")
- }
-     
-
- 
+ if (n1 == n2 == n3) {
+    console.log("Equilátero")
+ } else if(n1 !== n2 ==n3){
+     console.log("Isósceles")
+ }else if (n1 ==n2 !==n3){
+     console.log("Isósceles")
+ }else {
+    console.log("Escaleno")
+}*/

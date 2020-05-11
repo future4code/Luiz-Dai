@@ -7,3 +7,10 @@
 for(let numero of numeros){
     console.log(numero)
 }*/
+
+//exercicio 2
+//a false
+//b false
+//c false
+//d true
+//e false

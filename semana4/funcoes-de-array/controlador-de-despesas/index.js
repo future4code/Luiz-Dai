@@ -1,16 +1,33 @@
-/*A primeira seção é uma de cadastro, 
-que deve solicitar ao usuário, ao menos,
- essas 3 informações: valor (em reais); 
- tipo da despesa (em um dropdown para ele selecionar) 
- e um campo de descrição. Deve haver, 
-ao menos, 3 tipos de despesa; vocês podem escolher 
-quais serão esses tipos, mas aqui há exemplos de
- alguns:
-  "Despesas de Casa", "Despesas de Festas", 
-  "Despesas de Viagem", "Despesas com Alimentação"
-  , "Despesas com transporte", "Outros", etc.
-   Limitem-se a utilizar valores inteiros
-    para os gastos (ou seja, usar "60" e não usar "60.5") */
+let divida=[]
 
-    let valor = input("Digite um valor")
-    let tipoDespesa = input("Digite o tipo de despesa")
+function adicionarValor() {
+  event.preventDefault()   
+    let valor = document.getElementById("valor").value;
+    let tipo = document.getElementById("tipo").value;
+    let descricao = document.getElementById("descricao").value;
+    
+    const despesas ={
+      valores:valor,
+      tipos:tipo,
+      descricoes:descricao
+     }
+     divida.push(despesas)
+     
+     console.log(despesas)
+     inserir(divida)
+     limpa() 
+    }
+    function inserir(despesas) {
+        const gastos = despesas.map((despesa,index, array)=>{
+            return despesa.valores
+        }) 
+      document.getElementById("extrato").innerHTML +=`<p> ${despesas.valores} 
+      </p>  <p>${despesas.descricoes}</p>`
+      document.getElementById("extrato")`<p> ${despesas.tipos}</p>`
+    }
+const limpa =()=>{
+    let a = document.getElementById("valor").value=""
+    let b = document.getElementById("tipo").value=""
+    let c = document.getElementById("descricao").value=""
+
+}

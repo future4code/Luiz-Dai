@@ -12,22 +12,26 @@
         <h1>Cadastrar Despesa</h1>
         <form>
             <label for="valor">Valor</label> 
-            <input type="text" name = "novaTask" id= "novaTask"></input>
+            <input type="number" name="valor" id="valor"></input>
             <select name="tipo" id="tipo">
-            
                 <option value="casa">Casa</option>
                 <option value="festa">Festa</option>
                 <option value="viagem">Viagem</option>    
             </select>
-            <label for="descricao">Descrição</label> 
-            <input type="text" name = "descricao" id= "descricao"></input>
         </form>
+         <form>
+            <label for="descricao">Descrição</label> 
+            <input type="text" name ="descricao" id="descricao"></input>
+            <button onclick="adicionarValor()">Cadastrar</button>
+
+         </form>   
+           
     </section>
     <section>
 
         <h1>Despesas Detalhadas</h1>
         <form>
-            <select name="tipo" id="tipo">
+            <select name="tipo" class="tipo">
             
                 <option value="casa">Casa</option>
                 <option value="festa">Festa</option>
@@ -37,21 +41,35 @@
             <input type="text" name = "valorMinimo" id= "valorMinimo"></input>
             <label for="valorMaximo">Valor Maximo</label> 
             <input type="text" name = "valorMaximo" id= "valorMaximo"></input>
+            <button onclick="">Filtrar</button>
+            <button>Limpar Dados</button>
         </form>
 
     </section>
-    <section>
-
-        <h1>Extrato</h1>
-         <div>
-
-
-         </div>
+        <section >
+    
+            <article>
+                <h1>Extrato</h1>
+                <p id="extrato"></p>
+               
+                <ul id="casa">
+    
+                </ul>
+            </article>
+            <article>
+               
+                <ul id="festa">
+    
+                </ul>
+            </article>
+            <article>
+               
+                <ul id="viagem">
          <div>
              <p>Valor Total: </p>
          </div>
-
-    </section>
+        </section>
+    
     
     
 </body>

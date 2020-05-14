@@ -3,7 +3,7 @@ import './SecaoComentario.css'
 
 export class SecaoComentario extends Component {
 	state = {
-
+       
 	}
 
 	onChangeComentario() {
@@ -15,7 +15,7 @@ export class SecaoComentario extends Component {
 			<input
 				className={'input-comentario'}
 				placeholder={'Comentário'}
-				value={''}
+				value={this.state}
 				onChange={this.onChangeComentario}
 			/>
 			<button onClick={this.props.aoEnviar}>Enviar</button>

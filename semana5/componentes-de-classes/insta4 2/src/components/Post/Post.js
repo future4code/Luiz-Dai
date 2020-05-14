@@ -18,10 +18,18 @@ class Post extends React.Component {
 
   onClickCurtida = () => {
     this.setState({
-      curtido:true,
+    curtido: !this.state.curtido,
+  })
+
+    if (!this.state.curtido === true) {
+      this.setState({
       numeroCurtidas: this.state.numeroCurtidas + 1
-    })
-    console.log('Curtiu!')
+      })
+    } else {
+      this.setState({
+      numeroCurtidas: this.state.numeroCurtidas - 1
+      })
+    }
   }
 
   

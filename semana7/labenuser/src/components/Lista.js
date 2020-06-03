@@ -4,30 +4,28 @@ import React from "react";
 
 class Home extends React.Component {
     state = {
-        telaHome: ""
+        telaLista: ""
     };
 
     irParaUsuario = () => {
-        this.setState({ telaHome: "Usuario" });
+        this.setState({ telaLista: "Usuario" });
     };
 
-    irParaMensagens = () => {
-        this.setState({ telaHome: "MENSAGENS" });
-    };
 
     render() {
         const renderizaTela = () => {
-            switch (this.state.telaHome) {
+            switch (this.state.telaLista) {
                 case "":
-                    return <p>Seja bem-vindo</p>;
+                    return <li>Seja bem-vindo</li>;
 
             }
         };
 
         return (
             <div>
-                <h1>Home</h1>
-                <button onClick={this.props.fazerLogout}>Logout</button>
+                <button onClick={this.props.fazerLogout}>Ir para página de registro</button>
+                <h1>Lista</h1>
+
                 <hr />
                 {renderizaTela()}
             </div>

@@ -1,30 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import Login from "./components/Login";
-import Home from "./components/Home";
-import Usuario from "./components/Usuario"
+import Home from "./components/Lista";
+import axios from "axios";
+
 const AppContainer = styled.div`
   font-family: sans-serif;
   text-align: center;
+
 `;
 
 class App extends React.Component {
   state = {
-    loginNaTela: true
+    loginNaTela: true,
+
   };
 
   onClickLoginOrLogout = () => {
     this.setState({ loginNaTela: !this.state.loginNaTela });
   };
-  onClickAlerta = () => {
-    this.setState({ loginNaTela: !this.state.})
+  funcaoAlerta = () => {
+    alert("Salvos")
   }
 
   render() {
     if (this.state.loginNaTela) {
       return (
         <AppContainer>
-          <Login fazerLogin={this.onClickLoginOrLogout} />
+          <Login fazerLogin={this.onClickLoginOrLogout} alertaTela={this.funcaoAlerta} />
         </AppContainer>
       );
     } else {
@@ -35,6 +38,7 @@ class App extends React.Component {
         </AppContainer>
       );
     }
+
   }
 }
 

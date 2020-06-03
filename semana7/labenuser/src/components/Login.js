@@ -13,7 +13,8 @@ class Login extends React.Component {
                 <label>E-mail:</label>
                 <input></input>
                 <br></br>
-                <button onClick={this.props.fazerLogin}>Salvar</button>
+                <button onClick={this.props.alertaTela}>Salvar</button>
+
             </div>
         );
     }

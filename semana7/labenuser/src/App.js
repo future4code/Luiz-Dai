@@ -1,45 +1,30 @@
 import React from "react";
-import styled from "styled-components";
-import Login from "./components/Login";
-import Home from "./components/Lista";
-import axios from "axios";
+import SignUpPage from "./components/SignUpPage";
+import UsersListPage from "./components/UsersListPage";
 
-const AppContainer = styled.div`
-  font-family: sans-serif;
-  text-align: center;
-
-`;
-
-class App extends React.Component {
+export default class App extends React.Component {
   state = {
-    loginNaTela: true,
-
+    currentPage: "signUp"
   };
 
-  onClickLoginOrLogout = () => {
-    this.setState({ loginNaTela: !this.state.loginNaTela });
+  changePage = () => {
+    if (this.state.currentPage === "signUp") {
+      this.setState({ currentPage: "usersList" });
+    } else {
+      this.setState({ currentPage: "signUp" });
+    }
   };
-  funcaoAlerta = () => {
-    alert("Salvos")
-  }
 
   render() {
-    if (this.state.loginNaTela) {
-      return (
-        <AppContainer>
-          <Login fazerLogin={this.onClickLoginOrLogout} alertaTela={this.funcaoAlerta} />
-        </AppContainer>
-      );
-    } else {
-      return (
-        <AppContainer>
-          <Home fazerLogout={this.onClickLoginOrLogout} />
-
-        </AppContainer>
-      );
-    }
-
+    return (
+      <div>
+        <button onClick={this.changePage}>Trocar de tela</button>
+        {this.state.currentPage === "signUp" ? (
+          <SignUpPage />
+        ) : (
+            <UsersListPage />
+          )}
+      </div>
+    );
   }
 }
-
-export default App;

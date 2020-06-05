@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+const Container = styled.div`
+  font-family: sans-serif;
+  text-align: center;
+`;
+
+export class App extends React.Component {
+  state = {
+    atividade: {}
+  };
+
+  componentDidMount = () => {
+    this.geraAtividade();
+  };
+
+  geraAtividade = () => {
+    axios
+      .get(`https://www.boredapi.com/api/activity`)
+      .then(response => {
+        this.setState({ atividade: response.data });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  render() {
+    return (
+      <Container>
+        <button onClick={this.geraAtividade}>Gera atividade</button>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <strong>Atividade: </strong>
+          {this.state.atividade.activity}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <p>
+          <strong>Tipo: </strong>
+          {this.state.atividade.type}
+        </p>
+        <p>
+          <strong>Número de participantes: </strong>
+          {this.state.atividade.participants}
+        </p>
+        <p>
+          <strong>Preço: </strong>
+          {this.state.atividade.price}
+        </p>
+        <p>
+          <strong>Acessibilidade: </strong>
+          {this.state.atividade.accessibility}
+        </p>
+      </Container>
+    );
+  }
 }
 
 export default App;

@@ -28,7 +28,7 @@ class PlayList extends React.Component {
 
         axios
             .post(
-                "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
+                "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
                 body,
                 axiosConfig
             )
@@ -45,6 +45,7 @@ class PlayList extends React.Component {
     render() {
         return (
             <div>
+                <h1>PlayList</h1>
                 <input
                     placeholder="PlayList"
                     type="text"

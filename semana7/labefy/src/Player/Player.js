@@ -70,6 +70,7 @@ class Player extends React.Component {
             <div className="Player">
 
                 <h1>Adicione sua musica</h1>
+                <p><strong>Para adicionar a musica coloque código que vem depois do track/ da url da musica do spotify no campo URL da musica</strong></p>
                 <select onChange={this.onChangeSelectChange}>
                     <option value=""></option>
                     {this.state.playlists.map((playlist) => {

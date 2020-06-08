@@ -7,6 +7,7 @@ import Player from './Player/Player';
 function App() {
   return (
     <div className="App">
+      <h1>Labefy</h1>
       <PlayList />
       <hr />
       <Player />

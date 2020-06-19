@@ -56,10 +56,7 @@ justify-content:space-around;
 align-items:center;
 margin-top:5%;
 margin-bottom:5%;
-
-
 `
 export const Botao = styled.img`
 cursor: pointer;
-
 `

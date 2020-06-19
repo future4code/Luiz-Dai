@@ -8,24 +8,36 @@ import { Centralizado } from './components/styles'
 
 
 function App() {
-  const [tela, setTela] = useState("")
+  const [tela, setTela] = useState("Profile")
 
-  const onClickMatch = () => {
-    setTela({ tela: "Match" });
+  const onClickChangePage = () => {
+    if (tela === "Profile") {
+      setTela("Match")
+
+    } else {
+      setTela("Profile");
+
+    }
+
   };
 
 
+  if (tela === "Profile") {
+    return (
+      <Centralizado>
+        <Profile trocaTela={onClickChangePage} />
 
+      </Centralizado>
+    )
+  } else {
+    return (
+      <Centralizado>
+        <Match trocaTela={onClickChangePage} />
+      </Centralizado>
 
+    )
+  }
 
-
-
-
-  return (
-    <Centralizado>
-      <Profile />
-    </Centralizado>
-  );
 }
 
 export default App;

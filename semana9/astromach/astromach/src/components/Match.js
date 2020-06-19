@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { MatchImagem } from './styles'
+import { MatchImagem, Perfis, Botao } from './styles'
+import voltar from '../icones/arrow-left-circle.png'
+
 
 export default function Matches(props) {
     const [matches, setMatches] = useState([])
@@ -19,10 +21,10 @@ export default function Matches(props) {
 
     const pegaMatch = matches.map((info) => {
         return (
-            <div>
+            <Perfis>
                 <MatchImagem src={info.photo} alt="imagem" />
                 <p>{info.name}</p>
-            </div>
+            </Perfis>
 
         )
     })
@@ -30,7 +32,7 @@ export default function Matches(props) {
     return (
         <d>
             {pegaMatch}
-            <button>Voltar</button>
+            <Botao src={voltar} onClick={props.trocaTela} Voltar />
         </d>
     )
 }

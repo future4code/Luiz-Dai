@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Imagens, Headeres, Container } from './styles'
-import Match from './Match'
+import { Imagens, Headeres, Container, Centralizado, Botao } from './styles'
+import restore from '../icones/backup-restore.png'
+import heart from '../icones/heart-multiple.png'
+import brokeHeart from '../icones/heart-broken-outline.png'
+import match from '../icones/account-heart.png'
 
 
-
-function Profile() {
+function Profile(props) {
     const [perfil, setPerfil] = useState({})
     const perfilRecebido = () => {
         axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/Luiz-Mitsuru-Dai/person")
@@ -51,7 +53,7 @@ function Profile() {
     return (
         <div>
             <Headeres>
-                <button>Match</button>
+                <Botao src={match} onClick={props.trocaTela} Match />
                 <h1>Astromach</h1>
             </Headeres>
             <Imagens src={perfil.photo} />
@@ -59,12 +61,12 @@ function Profile() {
             <p>{perfil.name}, {perfil.age}</p>
             <p>{perfil.bio}</p>
             <Container>
-                <button onClick={() => choosePerson(false)} >X</button>
-                <button onClick={() => choosePerson(true)}>ok</button>
-                <button onClick={removeAll}>Reset</button>
+                <Botao src={brokeHeart} onClick={() => choosePerson(false)} X />
+                <Botao src={heart} onClick={() => choosePerson(true)} ok />
+                <Botao src={restore} onClick={removeAll} Reset />
             </Container>
 
-            <Match id={perfil.id} />
+
         </div>
     );
 }

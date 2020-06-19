@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { MatchImagem } from './styles'
 
 export default function Matches(props) {
     const [matches, setMatches] = useState([])
@@ -19,7 +20,7 @@ export default function Matches(props) {
     const pegaMatch = matches.map((info) => {
         return (
             <div>
-                <img src={info.photo} alt="imagem" />
+                <MatchImagem src={info.photo} alt="imagem" />
                 <p>{info.name}</p>
             </div>
 
@@ -27,9 +28,9 @@ export default function Matches(props) {
     })
 
     return (
-        <div>
+        <d>
             {pegaMatch}
             <button>Voltar</button>
-        </div>
+        </d>
     )
 }

@@ -8,6 +8,19 @@ import { Centralizado } from './components/styles'
 
 
 function App() {
+  const [tela, setTela] = useState("")
+
+  const onClickMatch = () => {
+    setTela({ tela: "Match" });
+  };
+
+
+
+
+
+
+
+
   return (
     <Centralizado>
       <Profile />

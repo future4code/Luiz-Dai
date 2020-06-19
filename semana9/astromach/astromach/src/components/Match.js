@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { MatchImagem, Perfis, Botao } from './styles'
+import { MatchImagem, Perfis, Botao, Voltar } from './styles'
 import voltar from '../icones/arrow-left-circle.png'
 
 
@@ -32,7 +32,11 @@ export default function Matches(props) {
     return (
         <d>
             {pegaMatch}
-            <Botao src={voltar} onClick={props.trocaTela} Voltar />
+            <Voltar>
+                <Botao src={voltar} onClick={props.trocaTela} Voltar />
+                <p>VOLTAR</p>
+            </Voltar>
+
         </d>
     )
 }

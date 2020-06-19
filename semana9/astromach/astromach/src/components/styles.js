@@ -60,3 +60,10 @@ margin-bottom:5%;
 export const Botao = styled.img`
 cursor: pointer;
 `
+export const Voltar = styled.header`
+display:flex;
+align-items:center;
+width:340px;
+height:50px;
+color:purple;
+`

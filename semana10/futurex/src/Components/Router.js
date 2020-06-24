@@ -6,6 +6,7 @@ import CreateTripPage from './CreateTripPage';
 import ListTripsPage from './ListTripsPage';
 import LoginPage from './LoginPage';
 import TripDetailsPage from './TripDetailsPage';
+import AplicationForm from './AplicationForm';
 
 
 
@@ -27,6 +28,9 @@ export default function Router() {
                 </Route>
                 <Route exact path="/trips/create">
                     <CreateTripPage />
+                </Route>
+                <Route exact path="/application-form">
+                    <AplicationForm />
                 </Route>
             </Switch>
 

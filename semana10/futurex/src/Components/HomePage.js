@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from "react-router-dom"
-
+import { Header, Body } from '../Styleds/Styled'
 
 export default function HomePage() {
     const history = useHistory();
@@ -13,16 +13,18 @@ export default function HomePage() {
     };
 
 
-
-
-
     return (
         <div>
 
-            <p>Login</p>
-            <button onClick={goToAboutPage}>Login</button>
-            <p>Form</p>
-            <button onClick={goToForm}>Form</button>
+            <Header>
+                <h1>FutureX </h1>
+                <button onClick={goToAboutPage}>Login</button>
+            </Header>
+            <Body>
+                <p>Form</p>
+                <button onClick={goToForm}>Form</button>
+            </Body>
+
 
         </div>
     )

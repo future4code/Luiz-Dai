@@ -21,8 +21,8 @@ export default function HomePage() {
                 <button onClick={goToAboutPage}>Login</button>
             </Header>
             <Body>
-                <p>Form</p>
-                <button onClick={goToForm}>Form</button>
+                <p>Inscreva-se aqui para uma viagem espacial</p>
+                <button onClick={goToForm}>FORMULÁRIO</button>
             </Body>
 
 

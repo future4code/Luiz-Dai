@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import useForm from "./hooks/useForm";
 import Countrys from "./Countrys";
 import axios from "axios";
+import { Header, Body, Form } from "../Styleds/Styled";
+import { Button } from "@material-ui/core";
 
 export default function AplicationForm() {
   const [trips, setTrips] = useState([]);
@@ -50,7 +52,7 @@ export default function AplicationForm() {
         body
       )
       .then(() => {
-        alert("fui");
+        alert("Enviado com sucesso");
       })
       .catch((err) => {
         console.log(err);
@@ -64,68 +66,80 @@ export default function AplicationForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Nome:</label>
-        <input
-          name="nome"
-          value={form.nome}
-          onChange={handleInputChange}
-          id="name"
-          type="text"
-          required
-          pattern="[A-Z a-z]{3,}"
-        ></input>
-        <label htmlFor="age"> Idade:</label>
-        <input
-          name="idade"
-          value={form.idade}
-          onChange={handleInputChange}
-          id="age"
-          type="number"
-          required
-          min="18"
-        ></input>
-        <label htmlFor="applicationText">
-          Porque sou um bom candidato(a)?{" "}
-        </label>
-        <input
-          name="pergunta"
-          value={form.pergunta}
-          onChange={handleInputChange}
-          id="applicationText"
-          type="text"
-          required
-          pattern="[A-Z a-z]{30,}"
-        ></input>
-        <label htmlFor="profession">Profissão</label>
-        <input
-          name="profissao"
-          value={form.profissao}
-          onChange={handleInputChange}
-          id="profession"
-          type="text"
-          required
-          pattern="[A-Z a-z]{10,}"
-        ></input>
-        <select
-          name="trip"
-          onChange={handleInputChange}
-          value={form.trip}
-          required
-        >
-          <option value="">Escolha a viagem</option>
-          {trips.map((id) => {
-            return (
-              <option value={id.id}>
-                {id.name}, {id.planet}
-              </option>
-            );
-          })}
-        </select>
-        <Countrys onChange={handleInputChange} value={form.country} />
+      <Header>
+        <h1>Formulário de inscrição</h1>
+      </Header>
+      <Body>
+        <Form onSubmit={handleSubmit}>
+          <label htmlFor="name">Nome:</label>
+          <input
+            name="nome"
+            value={form.nome}
+            onChange={handleInputChange}
+            id="name"
+            type="text"
+            required
+            pattern="[A-Z a-z]{3,}"
+          ></input>
+          <label htmlFor="age"> Idade:</label>
+          <input
+            name="idade"
+            value={form.idade}
+            onChange={handleInputChange}
+            id="age"
+            type="number"
+            required
+            min="18"
+          ></input>
+          <label htmlFor="applicationText">
+            Porque sou um bom candidato(a)?{" "}
+          </label>
+          <input
+            name="pergunta"
+            value={form.pergunta}
+            onChange={handleInputChange}
+            id="applicationText"
+            type="text"
+            required
+            pattern="[A-Z a-z]{30,}"
+          ></input>
+          <label htmlFor="profession">Profissão</label>
+          <input
+            name="profissao"
+            value={form.profissao}
+            onChange={handleInputChange}
+            id="profession"
+            type="text"
+            required
+            pattern="[A-Z a-z]{10,}"
+          ></input>
+          <select
+            name="trip"
+            onChange={handleInputChange}
+            value={form.trip}
+            required
+          >
+            <option value="">Escolha a viagem</option>
+            {trips.map((id) => {
+              return (
+                <option value={id.id}>
+                  {id.name}, {id.planet}
+                </option>
+              );
+            })}
+          </select>
+          <Countrys onChange={handleInputChange} value={form.country} />
 
-        <button type="submit">ENVIAR</button>
-      </form>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            type="submit"
+          >
+            ENVIAR
+          </Button>
+        </Form>
+      </Body>
     </div>
   );
 }

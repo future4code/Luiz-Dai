@@ -6,7 +6,7 @@ const App = () => {
   const [postsList, setPostsList] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const onChangeInput = event => {
+  const onChangeInput = (event) => {
     setInputValue(event.target.value);
   };
 
@@ -15,7 +15,7 @@ const App = () => {
     const newPost = {
       id: Date.now(),
       text: inputValue,
-      liked: false
+      liked: false,
     };
 
     const newPostsList = [newPost, ...postsList];
@@ -23,22 +23,22 @@ const App = () => {
     setPostsList(newPostsList);
   };
 
-  const deletePost = postId => {
+  const deletePost = (postId) => {
     // Apaga um post da lista
-    const newPostsList = postsList.filter(post => {
+    const newPostsList = postsList.filter((post) => {
       return postId !== post.id;
     });
 
     setPostsList(newPostsList);
   };
 
-  const toggleLike = postId => {
+  const toggleLike = (postId) => {
     // Altera o status de curtida de um post da lista
-    const newPostsList = postsList.map(post => {
+    const newPostsList = postsList.map((post) => {
       if (postId === post.id) {
         const novoPost = {
           ...post,
-          liked: !post.liked
+          liked: !post.liked,
         };
         return novoPost;
       } else {
@@ -61,7 +61,7 @@ const App = () => {
         <button onClick={addPost}>Adicionar</button>
       </div>
       <br />
-      {postsList.map(post => {
+      {postsList.map((post) => {
         return (
           <Post
             key={post.id}

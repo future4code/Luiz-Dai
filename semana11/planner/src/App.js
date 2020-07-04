@@ -1,8 +1,44 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import { Container } from './styles';
+import { Header, Body, Form, Gride } from "./style";
+
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    background: "linear-gradient(45deg, #0c1f38 30%, #ff99cc 90%)",
+    margin: "10px",
+    color: "white",
+  },
+}));
+
+const useButton = makeStyles({
+  root: {
+    background: "linear-gradient(45deg, #0c1f38 30%, #ff99cc 90%)",
+    border: 0,
+    borderRadius: 3,
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    color: "white",
+    textShadow: "2px 2px 2px 2px black",
+    height: 20,
+
+    padding: "0 30px",
+  },
+});
 
 function App() {
+  const classes = useStyles();
+  const customizeButton = useButton();
   const [tarefa, setTarefa] = useState("");
   const [semana, setSemana] = useState("");
   const [listaTarefa, setListaTarefa] = useState([""]);
@@ -104,60 +140,91 @@ function App() {
   //Eu fiz um forEach no array da api dando push nos arrays dos dias, depois map nos arrays dos dias//
   return (
     <div>
-      <header>
+      <Header>
         <h1>PLANNER</h1>
-      </header>
-      <div>
+      </Header>
+      <Body>
         <h2>Minhas Tarefas</h2>
-        <label htmlFor="novaTarefa">Nova Tarefa: </label>
-        <input
-          onChange={digitarTarefa}
-          type="text"
-          name="tarefa"
-          id="tarefa"
-        ></input>
-        <select onChange={selecionarSemana} name="diaDaSemana" id="diaDaSemana">
-          <option>SELECIONE</option>
-          <option value="segunda">SEGUNDA-FEIRA</option>
-          <option value="terca">TERÇA-FEIRA</option>
-          <option value="quarta">QUARTA-FEIRA</option>
-          <option value="quinta">QUINTA-FEIRA</option>
-          <option value="sexta">SEXTA-FEIRA</option>
-          <option value="sabado">SÁBADO</option>
-          <option value="domingo">DOMINGO</option>
-        </select>
-        <button onClick={criarTarefa}>ADICIONAR TAREFA</button>
-        <div>
-          <h4>SEGUNDA-FEIRA</h4>
-          {seg}
-        </div>
-        <div>
-          <h4>TERÇA-FEIRA</h4>
-          {ter}
-        </div>
-        <div>
-          <h4>QUARTA-FEIRA</h4>
-          {quar}
-        </div>
-        <div>
-          <h4>QUINTA-FEIRA</h4>
-          {quin}
-        </div>
-        <div>
-          <h4>SEXTA-FEIRA</h4>
-          {sex}
-        </div>
-        <div>
-          <h4>SÁBADO</h4>
-          {sab}
-        </div>
-        <div>
-          <h4>DOMINGO</h4>
-          {dom}
-        </div>
-      </div>
+        <Form>
+          <label htmlFor="novaTarefa">Nova Tarefa: </label>
+          <input
+            onChange={digitarTarefa}
+            type="text"
+            name="tarefa"
+            id="tarefa"
+          ></input>
+          <select
+            onChange={selecionarSemana}
+            name="diaDaSemana"
+            id="diaDaSemana"
+          >
+            <option>SELECIONE</option>
+            <option value="segunda">SEGUNDA-FEIRA</option>
+            <option value="terca">TERÇA-FEIRA</option>
+            <option value="quarta">QUARTA-FEIRA</option>
+            <option value="quinta">QUINTA-FEIRA</option>
+            <option value="sexta">SEXTA-FEIRA</option>
+            <option value="sabado">SÁBADO</option>
+            <option value="domingo">DOMINGO</option>
+          </select>
+          <Button
+            className={customizeButton.root}
+            size="small"
+            onClick={criarTarefa}
+          >
+            ADICIONAR TAREFA
+          </Button>
+        </Form>
+
+        <Gride className={classes.root}>
+          <Grid container spacing={3}>
+            <Grid item="xs">
+              <Paper className={classes.paper}>
+                <h4>SEGUNDA-FEIRA</h4>
+                {seg}
+              </Paper>
+            </Grid>
+            <Grid item="xs">
+              <Paper className={classes.paper}>
+                <h4>TERÇA-FEIRA</h4>
+                {ter}
+              </Paper>
+            </Grid>
+            <Grid item="xs">
+              <Paper className={classes.paper}>
+                <h4>QUARTA-FEIRA</h4>
+                {quar}
+              </Paper>
+            </Grid>
+            <Grid item="xs">
+              <Paper className={classes.paper}>
+                <h4>QUINTA-FEIRA</h4>
+                {quin}
+              </Paper>
+            </Grid>
+            <Grid item="xs">
+              <Paper className={classes.paper}>
+                <h4>SEXTA-FEIRA</h4>
+                {sex}
+              </Paper>
+            </Grid>
+            <Grid item="xs">
+              <Paper className={classes.paper}>
+                <h4>SÁBADO</h4>
+                {sab}
+              </Paper>
+            </Grid>
+            <Grid item="xs">
+              {" "}
+              <Paper className={classes.paper}>
+                <h4>DOMINGO</h4>
+                {dom}
+              </Paper>
+            </Grid>
+          </Grid>
+        </Gride>
+      </Body>
     </div>
   );
 }
-
 export default App;

@@ -26,6 +26,9 @@ export const Form = styled.form`
   display: flex;
   flex-direction: row;
   border: 5px solid #0c1f38;
+  background: linear-gradient(to right 45deg, #0c1f38 30%, #ff99cc 90%);
+  color: whitesmoke;
+  text-shadow: 5px 5px 5px 5px black;
   box-shadow: 10px 0 10px 0 black;
   font-weight: bolder;
 `;

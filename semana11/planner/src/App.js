@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import { Container } from './styles';
-import { Header, Body, Form, Gride } from "./style";
+import { Header, Body, Form, Gride, Selection } from "./style";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -26,12 +26,11 @@ const useButton = makeStyles({
   root: {
     background: "linear-gradient(45deg, #0c1f38 30%, #ff99cc 90%)",
     border: 0,
-    borderRadius: 3,
+    borderRadius: 0,
     boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
     color: "white",
     textShadow: "2px 2px 2px 2px black",
-    height: 20,
-
+    height: 25,
     padding: "0 30px",
   },
 });
@@ -41,7 +40,20 @@ function App() {
   const customizeButton = useButton();
   const [tarefa, setTarefa] = useState("");
   const [semana, setSemana] = useState("");
-  const [listaTarefa, setListaTarefa] = useState([""]);
+  const [listaTarefa, setListaTarefa] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://us-central1-labenu-apis.cloudfunctions.net/generic/planner-Mello-Luiz-Mitsuru-Dai"
+      )
+      .then((response) => {
+        setListaTarefa(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const digitarTarefa = (event) => {
     setTarefa(event.target.value);
@@ -59,34 +71,35 @@ function App() {
         body
       )
       .then((response) => {
-        pegarTarefa();
+        console.log("criou");
       })
       .catch((err) => {
         console.log(err);
       });
+    const dado = [...listaTarefa, body];
+    setListaTarefa(dado);
   };
-
-  const pegarTarefa = () => {
-    axios
-      .get(
-        "https://us-central1-labenu-apis.cloudfunctions.net/generic/planner-Mello-Luiz-Mitsuru-Dai"
-      )
-      .then((response) => {
-        setListaTarefa(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  console.log(listaTarefa);
-
-  useEffect(() => {
-    pegarTarefa();
-  }, []);
 
   const selecionarSemana = (event) => {
     setSemana(event.target.value);
   };
+
+  async function removeTarefa(id) {
+    try {
+      await axios.delete(
+        `https://us-central1-labenu-apis.cloudfunctions.net/generic/planner-Mello-Luiz-Mitsuru-Dai/${id}`
+      );
+      const pega = listaTarefa.findIndex((t) => t.id === id);
+      if (pega !== -1) {
+        listaTarefa.splice(pega, 1);
+      }
+      setListaTarefa([...listaTarefa]);
+      console.log(`deletou ${id}`);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   console.log(semana);
 
   let segunda = [];
@@ -126,7 +139,12 @@ function App() {
   });
 
   const tarefaRenderizada = (semana) =>
-    semana.map((atividade) => <div>{atividade.text}</div>);
+    semana.map((atividade) => (
+      <div key={atividade.id}>
+        <button onClick={() => removeTarefa(atividade.id)}>DELETAR</button>
+        {atividade.text}
+      </div>
+    ));
 
   console.log(segunda);
   const seg = tarefaRenderizada(segunda);
@@ -153,7 +171,7 @@ function App() {
             name="tarefa"
             id="tarefa"
           ></input>
-          <select
+          <Selection
             onChange={selecionarSemana}
             name="diaDaSemana"
             id="diaDaSemana"
@@ -166,7 +184,7 @@ function App() {
             <option value="sexta">SEXTA-FEIRA</option>
             <option value="sabado">SÁBADO</option>
             <option value="domingo">DOMINGO</option>
-          </select>
+          </Selection>
           <Button
             className={customizeButton.root}
             size="small"

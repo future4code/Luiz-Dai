@@ -27,10 +27,10 @@ export const Form = styled.form`
   flex-direction: row;
   border: 5px solid #0c1f38;
   background: linear-gradient(to right 45deg, #0c1f38 30%, #ff99cc 90%);
-  color: whitesmoke;
+  color: #0c1f38;
   text-shadow: 5px 5px 5px 5px black;
   box-shadow: 10px 0 10px 0 black;
-  font-weight: bolder;
+  font-weight: bold;
 `;
 export const Gride = styled.div`
   display: flex;
@@ -39,4 +39,9 @@ export const Gride = styled.div`
   box-shadow: 20px 0 10px 0 black;
   font-weight: bolder;
   margin-top: 20px;
+`;
+export const Selection = styled.select`
+  background: linear-gradient(-180deg, #6699ff 30%, #ff99cc 90%);
+  color: #0c1f38;
+  font-weight: bold;
 `;

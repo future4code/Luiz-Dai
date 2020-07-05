@@ -35,9 +35,26 @@ const useButton = makeStyles({
   },
 });
 
+const useButton2 = makeStyles({
+  root: {
+    background: "#B22222",
+    border: 0,
+    borderRadius: 6,
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+    color: "white",
+    textShadow: "2px 2px 2px 2px black",
+    margin: "5px",
+    height: 25,
+    width: 15,
+    textAlign: "center",
+    padding: "0 30px",
+  },
+});
+
 function App() {
   const classes = useStyles();
   const customizeButton = useButton();
+  const customizeButton2 = useButton2();
   const [tarefa, setTarefa] = useState("");
   const [semana, setSemana] = useState("");
   const [listaTarefa, setListaTarefa] = useState([]);
@@ -141,7 +158,13 @@ function App() {
   const tarefaRenderizada = (semana) =>
     semana.map((atividade) => (
       <div key={atividade.id}>
-        <button onClick={() => removeTarefa(atividade.id)}>DELETAR</button>
+        <Button
+          className={customizeButton2.root}
+          size="small"
+          onClick={() => removeTarefa(atividade.id)}
+        >
+          DELETAR
+        </Button>
         {atividade.text}
       </div>
     ));
@@ -233,7 +256,6 @@ function App() {
               </Paper>
             </Grid>
             <Grid item="xs">
-              {" "}
               <Paper className={classes.paper}>
                 <h4>DOMINGO</h4>
                 {dom}

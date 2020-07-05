@@ -8,17 +8,17 @@ export const Header = styled.header`
   color: white;
   text-shadow: 5px 5px 5px 5px black;
   border: 2px solid black;
-  height: 80px;
+  height: 50px;
 `;
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin-top: 30px;
   padding: 0;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background: linear-gradient(45deg, #6699ff 30%, #ff99cc 90%);
   color: #0c1f38;
 `;

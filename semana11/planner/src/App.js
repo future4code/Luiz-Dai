@@ -35,26 +35,9 @@ const useButton = makeStyles({
   },
 });
 
-const useButton2 = makeStyles({
-  root: {
-    background: "#B22222",
-    border: 0,
-    borderRadius: 6,
-    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-    color: "white",
-    textShadow: "2px 2px 2px 2px black",
-    margin: "5px",
-    height: 25,
-    width: 15,
-    textAlign: "center",
-    padding: "0 30px",
-  },
-});
-
 function App() {
   const classes = useStyles();
   const customizeButton = useButton();
-  const customizeButton2 = useButton2();
   const [tarefa, setTarefa] = useState("");
   const [semana, setSemana] = useState("");
   const [listaTarefa, setListaTarefa] = useState([]);
@@ -75,7 +58,6 @@ function App() {
   const digitarTarefa = (event) => {
     setTarefa(event.target.value);
   };
-  console.log(tarefa);
 
   const criarTarefa = () => {
     const body = {
@@ -89,10 +71,12 @@ function App() {
       )
       .then((response) => {
         console.log("criou");
+        setTarefa("");
       })
       .catch((err) => {
         console.log(err);
       });
+
     const dado = [...listaTarefa, body];
     setListaTarefa(dado);
   };
@@ -100,24 +84,6 @@ function App() {
   const selecionarSemana = (event) => {
     setSemana(event.target.value);
   };
-
-  async function removeTarefa(id) {
-    try {
-      await axios.delete(
-        `https://us-central1-labenu-apis.cloudfunctions.net/generic/planner-Mello-Luiz-Mitsuru-Dai/${id}`
-      );
-      const pega = listaTarefa.findIndex((t) => t.id === id);
-      if (pega !== -1) {
-        listaTarefa.splice(pega, 1);
-      }
-      setListaTarefa([...listaTarefa]);
-      console.log(`deletou ${id}`);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  console.log(semana);
 
   let segunda = [];
   let terca = [];
@@ -156,20 +122,8 @@ function App() {
   });
 
   const tarefaRenderizada = (semana) =>
-    semana.map((atividade) => (
-      <div key={atividade.id}>
-        <Button
-          className={customizeButton2.root}
-          size="small"
-          onClick={() => removeTarefa(atividade.id)}
-        >
-          DELETAR
-        </Button>
-        {atividade.text}
-      </div>
-    ));
+    semana.map((atividade) => <div key={atividade.id}>{atividade.text}</div>);
 
-  console.log(segunda);
   const seg = tarefaRenderizada(segunda);
   const ter = tarefaRenderizada(terca);
   const quar = tarefaRenderizada(quarta);
@@ -187,27 +141,32 @@ function App() {
       <Body>
         <h2>Minhas Tarefas</h2>
         <Form>
-          <label htmlFor="novaTarefa">Nova Tarefa: </label>
           <input
             onChange={digitarTarefa}
             type="text"
             name="tarefa"
             id="tarefa"
+            value={tarefa}
+            placeholder="Digite aqui"
           ></input>
-          <Selection
-            onChange={selecionarSemana}
-            name="diaDaSemana"
-            id="diaDaSemana"
-          >
-            <option>SELECIONE</option>
-            <option value="segunda">SEGUNDA-FEIRA</option>
-            <option value="terca">TERÇA-FEIRA</option>
-            <option value="quarta">QUARTA-FEIRA</option>
-            <option value="quinta">QUINTA-FEIRA</option>
-            <option value="sexta">SEXTA-FEIRA</option>
-            <option value="sabado">SÁBADO</option>
-            <option value="domingo">DOMINGO</option>
-          </Selection>
+          <label htmlFor="diaDaSemana">
+            Escolha o dia:
+            <Selection
+              onChange={selecionarSemana}
+              name="diaDaSemana"
+              id="diaDaSemana"
+              value={semana}
+            >
+              <option>SELECIONE</option>
+              <option value="segunda">SEGUNDA</option>
+              <option value="terca">TERÇA</option>
+              <option value="quarta">QUARTA</option>
+              <option value="quinta">QUINTA</option>
+              <option value="sexta">SEXTA</option>
+              <option value="sabado">SÁBADO</option>
+              <option value="domingo">DOMINGO</option>
+            </Selection>
+          </label>
           <Button
             className={customizeButton.root}
             size="small"

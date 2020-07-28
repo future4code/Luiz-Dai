@@ -12,5 +12,7 @@ function obterEstatisticas(numeros) {
     };
     return estatisticas;
 }
-console.log(obterEstatisticas(numero));
-// Quais são as entradas e saídas dessa função? Copie a função para um arquivo .ts e faça a tipagem desses parâmetros
+var amostraDeIdades = {
+    numeros: [21, 18, 65, 44, 15, 18],
+    obterEstatisticas: function (numeros) { return obterEstatisticas(numeros); }
+};

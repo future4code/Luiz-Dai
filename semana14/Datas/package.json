@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exercicio2": "tsc && node ./build/exercicio2.js",
+    "exercicio3": "tsc && node ./build/exercicio3.js",
+    "exercicio4": "tsc && node ./build/exercicio4.js"
   },
   "author": "Luiz Mitsuru Dai",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^14.0.27",
+    "moment": "^2.27.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   }

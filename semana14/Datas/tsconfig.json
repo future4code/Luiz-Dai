@@ -8,6 +8,6 @@
     "target": "es6",
     "module": "commonjs"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/exercicio3.ts", "exercicio4.ts"],
   "exclude": ["node_modules"]
 }

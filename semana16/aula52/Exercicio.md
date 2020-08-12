@@ -145,7 +145,7 @@ c)
 SELECT COUNT(*) FROM Movie WHERE playing_limit_date > CURDATE();
 
 d)
-SELECT COUNT(*) FROM Movie WHERE release_date < CURDATE();
+SELECT COUNT(*) FROM Movie WHERE release_date > CURDATE();
 
 e)
 SELECT MAX(rating) FROM Movie;
